@@ -1,0 +1,54 @@
+Experimento 1 · La última fila
+Flex: las tarjetas sobrantes se estiran para llenar la fila, pero no quedan alineadas con las de arriba.
+
+Grid: las columnas se mantienen perfectamente alineadas entre filas.
+
+Preferencia Flex: cuando quieres que los elementos ocupen todo el ancho disponible sin importar la alineación 
+(ej. botones de acción).
+
+
+Experimento 2 · El eje que se voltea
+Antes: justify-content centraba horizontalmente y align-items alineaba en el vertical.
+
+Después de flex-direction: column: se invierten, justify-content trabaja sobre el vertical y align-items sobre el horizontal.
+
+Regla: justify-content controla el eje principal, align-items el eje cruzado.
+
+
+Experimento 3 · La palabra que rompe el layout
+
+Una sola palabra larga ensancha toda la columna porque no puede partirse.
+
+Soluciones:
+
+min-width: 0: deja que la columna se ajuste.
+
+overflow-wrap: break-word: parte la palabra y mantiene el diseño.
+
+overflow: hidden: corta el texto pero se pierde información.
+
+Mejor resultado visual: overflow-wrap: break-word.
+
+
+Experimento 4 · Mover cosas sin tocar el HTML
+
+Con Grid cambias solo el CSS (grid-template-columns y grid-template-areas).
+
+Inversión: lateral a la derecha "cabecera cabecera" "contenido lateral" "pie pie".
+
+Apilado: todo en una columna "cabecera" "lateral" "contenido" "pie".
+
+HTML tocado: ninguna línea.
+
+Con float o absolute sería mucho más complejo y frágil.
+
+
+Experimento 5 · gap vs margin
+¿qué diferencia ves en el borde de afuera y entre las tarjetas? 
+¿Cuál de los dos te obliga a escribir reglas de excepción para el primero y el último elemento?
+
+Margin: también empuja contra el borde exterior, dejando espacios extra.
+
+Gap: solo separa entre elementos, el borde exterior queda limpio.
+
+Resultado: con margin necesitas excepciones para el primer y último elemento; con gap no.
