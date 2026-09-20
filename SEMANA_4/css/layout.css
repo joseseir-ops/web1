@@ -1,0 +1,153 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "cabecera cabecera"
+    "filtros resultados"
+    "pie pie";
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Cabecera fija con flexbox */
+.cabecera {
+  grid-area: cabecera;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #4eb4a8;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.cabecera .logo {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.cabecera .buscador {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 20px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.cabecera .menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.cabecera .menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sidebar de filtros */
+.filtros {
+  grid-area: filtros;
+  padding: 20px;
+  background: #f4f4f9;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filtros fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* Grilla de resultados */
+.resultados {
+  grid-area: resultados;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.tarjeta img {
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.tarjeta h3 {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.tarjeta p {
+  margin-bottom: 8px;
+}
+
+.tarjeta .precio {
+  font-weight: bold;
+  color: #2a9d8f;
+}
+
+.tarjeta button {
+  margin-top: auto; /* empuja el botón al fondo */
+  background: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tarjeta button:hover {
+  background: #1f776f;
+}
+
+/* Footer con grid */
+.pie {
+  grid-area: pie;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #264653;
+  color: white;
+  padding: 20px;
+  gap: 20px;
+}
+
+.pie h4 {
+  margin-bottom: 10px;
+}
+
+.pie a {
+  display: block;
+  color: #e9c46a;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
