@@ -8,11 +8,11 @@
 body {
   display: grid;
   grid-template-areas:
-    "cabecera cabecera"
-    "filtros resultados"
-    "pie pie";
-  grid-template-columns: 250px 1fr;
-  grid-template-rows: auto 1fr auto;
+    "cabecera"
+    "resultados"
+    "filtros"
+    "pie";
+  grid-template-columns: 1fr;
   min-height: 100vh;
   font-family: Arial, sans-serif;
 }
@@ -38,11 +38,11 @@ body {
 
 .cabecera .buscador {
   flex: 1;
-  max-width: 400px;
-  margin: 0 20px;
-  padding: 8px;
+  max-width: 1000px;
+  padding: 10px 14px;
+  border: 1px solid #bbb;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  font-size: 16px;
 }
 
 .cabecera .menu {
@@ -55,6 +55,37 @@ body {
   color: white;
   text-decoration: none;
   font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .cabecera .menu {
+    flex-direction: row;
+  }
+
+  .resultados {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pie {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    grid-template-areas:
+      "cabecera cabecera"
+      "filtros resultados"
+      "pie pie";
+    grid-template-columns: 250px 1fr;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 3/2;
+  object-fit: cover;
 }
 
 /* Sidebar de filtros */
