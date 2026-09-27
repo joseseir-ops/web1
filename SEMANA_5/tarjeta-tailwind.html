@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica Tailwind</title>
+  <!-- CDN de Tailwind para prototipado -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="bg-slate-100 p-8">
+
+  <h1 class="text-3xl font-bold text-indigo-600 mb-6">¡Productos en la tienda Tailwind funcionando!</h1>
+
+  <!-- Grilla de tarjetas -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <!-- Tarjeta de producto -->
+    <div class="bg-white rounded-xl shadow-md p-4 flex flex-col">
+      <img class="w-full rounded-lg aspect-[3/2] object-cover" src="https://picsum.photos/300/200?random=8" alt="Producto">
+      <h3 class="text-lg font-bold mt-2">Producto #1 Tailwind</h3>
+      <p class="text-indigo-600 font-semibold">$59.900</p>
+      <button class="mt-auto bg-indigo-600 text-white rounded-lg py-2 hover:bg-indigo-700">Agregar</button>
+    </div>
+
+     <div class="bg-white rounded-xl shadow-md p-4 flex flex-col">
+      <img class="w-full rounded-lg aspect-[3/2] object-cover" src="https://picsum.photos/300/200?random=6" alt="Producto">
+      <h3 class="text-lg font-bold mt-2">Producto #2 Tailwind</h3>
+      <p class="text-indigo-600 font-semibold">$69.900</p>
+      <button class="mt-auto bg-indigo-600 text-white rounded-lg py-2 hover:bg-indigo-700">Agregar</button>
+    </div>
+
+     <div class="bg-white rounded-xl shadow-md p-4 flex flex-col">
+      <img class="w-full rounded-lg aspect-[3/2] object-cover" src="https://picsum.photos/300/200?random=7" alt="Producto">
+      <h3 class="text-lg font-bold mt-2">Producto #3 Tailwind</h3>
+      <p class="text-indigo-600 font-semibold">$79.900</p>
+      <button class="mt-auto bg-indigo-600 text-white rounded-lg py-2 hover:bg-indigo-700">Agregar</button>
+    </div>
+
+     <div class="bg-white rounded-xl shadow-md p-4 flex flex-col">
+      <img class="w-full rounded-lg aspect-[3/2] object-cover" src="https://picsum.photos/300/200?random=15" alt="Producto">
+      <h3 class="text-lg font-bold mt-2">Producto #4 Tailwind</h3>
+      <p class="text-indigo-600 font-semibold">$89.900</p>
+      <button class="mt-auto bg-indigo-600 text-white rounded-lg py-2 hover:bg-indigo-700">Agregar</button>
+    </div>
+
+     <div class="bg-white rounded-xl shadow-md p-4 flex flex-col">
+      <img class="w-full rounded-lg aspect-[3/2] object-cover" src="https://picsum.photos/300/200?random=10" alt="Producto">
+      <h3 class="text-lg font-bold mt-2">Producto #5 Tailwind</h3>
+      <p class="text-indigo-600 font-semibold">$99.900</p>
+      <button class="mt-auto bg-indigo-600 text-white rounded-lg py-2 hover:bg-indigo-700">Agregar</button>
+    </div>
+
+     <div class="bg-white rounded-xl shadow-md p-4 flex flex-col">
+      <img class="w-full rounded-lg aspect-[3/2] object-cover" src="https://picsum.photos/300/200?random=5" alt="Producto">
+      <h3 class="text-lg font-bold mt-2">Producto #6 Tailwind</h3>
+      <p class="text-indigo-600 font-semibold">$109.900</p>
+      <button class="mt-auto bg-indigo-600 text-white rounded-lg py-2 hover:bg-indigo-700">Agregar</button>
+    </div>
+
+     <div class="bg-white rounded-xl shadow-md p-4 flex flex-col">
+      <img class="w-full rounded-lg aspect-[3/2] object-cover" src="https://picsum.photos/300/200?random=3" alt="Producto">
+      <h3 class="text-lg font-bold mt-2">Producto #7 Tailwind</h3>
+      <p class="text-indigo-600 font-semibold">$119.900</p>
+      <button class="mt-auto bg-indigo-600 text-white rounded-lg py-2 hover:bg-indigo-700">Agregar</button>
+    </div>
+
+     <div class="bg-white rounded-xl shadow-md p-4 flex flex-col">
+      <img class="w-full rounded-lg aspect-[3/2] object-cover" src="https://picsum.photos/300/200?random=2" alt="Producto">
+      <h3 class="text-lg font-bold mt-2">Producto #8 Tailwind</h3>
+      <p class="text-indigo-600 font-semibold">$129.900</p>
+      <button class="mt-auto bg-indigo-600 text-white rounded-lg py-2 hover:bg-indigo-700">Agregar</button>
+    </div>
+
+    <!-- Duplica esta tarjeta 7 veces más cambiando el src y el texto -->
+    
+  </div>
+
+</body>
+</html>
