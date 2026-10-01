@@ -1,0 +1,104 @@
+Parcial 1 – Programación para Entornos Web I
+Universidad de Caldas – 2026-2
+Estudiante: José Seir Victoria Colorado
+Codigo: 66952
+
+------------------------------------------------------------
+Parte A · Teórico-práctica (50%)
+------------------------------------------------------------
+
+1. HTTP y la web
+Un usuario reporta: «la página carga, pero las imágenes salen rotas»
+. En DevTools → pestaña Network, laspeticiones de las imágenes muestran el estado 404.
+
+(a) ¿Qué significa exactamente ese 404 ? ¿El problema está del lado del cliente o del servidor? 
+Justifica.
+
+R/: El código 404 significa que el servidor recibió la petición pero no encontró el recurso solicitado. 
+El error está del lado del servidor o de la ruta configurada, no por parte del cliente.
+
+(b) ¿Qué dato de la petición fallida revisarías primero para encontrar la causa, y con qué lo 
+compararías?
+
+R/: Se debe revisar primero el URL de la petición fallida en DevTools y compararlo con la ruta real 
+del archivo en el servidor y con la ruta escrita en el HTML/CSS.
+
+------------------------------------------------------------
+
+2. HTML semántico
+Reescribe este fragmento con las etiquetas semánticas correctas y justifica dos de tus decisiones.
+
+Código:
+<div class="top"><div class="logo">Mi blog</div></div>
+<div class="links"> ...</div>
+<div class="post"><div class="titulo-grande">Mi viaje</div><p>...</p></div>
+
+Código corregido:
+<header><h1>Mi blog</h1></header>
+<nav>...</nav>
+<article><h2>Mi viaje</h2><p>...</p></article>
+
+Justificaciones:
+
+1. El título principal lo agregue en un <h1> y dentro de <header>.
+2. Los enlaces de navegación los agregue en <nav>.
+
+------------------------------------------------------------
+
+3. Especificidad CSS
+
+Reglas:
+
+p           { color: black;  }    (0,0,1) 
+#zona p     { color: green;  }    (1,0,1) 
+.destacado  { color: orange; }    (0,1,0) 
+p.destacado { color: purple; }    (0,1,1) 
+
+<div id="zona">
+    <p class="destacado">Texto</p>
+</div>
+
+(a)¿De qué color se ve «Texto»? Explica por qué, calculando la especificidad de las reglas
+que aplican.
+
+R/: Color final: Verde, porque #zona p tiene mayor especificidad (1,0,1).
+
+(b) Si se elimina la regla #zona p, ¿de qué color queda y por qué?
+R/: Si se elimina #zona p: gana por especificidad p.destacado (0,1,1). El texto quedaria de color morado.
+
+------------------------------------------------------------
+
+4. Box model
+width: 300px; padding: 24px; border: 2px solid; margin: 16px;
+
+(a) (a) Calcula el ancho visible de la caja (borde a borde, sin contar el margin) con box-sizing: 
+content-box y con box-sizing: border-box. Muestra la operación.
+
+ R/: content-box: 300 + (24+24) + (2+2) = 352px
+
+(b) ¿Por qué el curso pone *, *::before, *::after { box-sizing: border-box; } como primera línea 
+de toda hoja de estilos?
+
+R/: border-box: 300px, Se usa border-box porque simplifica el diseño responsive.
+
+------------------------------------------------------------
+
+5. Una grilla de productos debe mostrar 1 columna en el celular y hasta 4 en escritorio. 
+Dos estudiantes proponen:  Flexbox vs Grid
+
+Propuesta A (Flexbox):
+.grilla { display: flex; flex-wrap: wrap; gap: 16px; }
+.tarjeta { flex: 1 1 250px; }
+
+Propuesta B (Grid):
+.grilla { display: grid; gap: 16px;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+(a) ¿En qué situación visible se comportan distinto las dos propuestas? Descríbela (puedes dibujarla). 
+R/: Diferencia visible: Flexbox puede dejar filas desalineadas. Grid mantiene columnas uniformes.
+
+(b)¿Cuál usarías para una grilla uniforme de tarjetas y por qué?
+R/: Para grilla uniforme: Usaria Grid, porque este garantizaria la consistencia y mejor control responsive.
+
+------------------------------------------------------------
+

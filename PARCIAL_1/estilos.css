@@ -1,0 +1,59 @@
+body {
+  background: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.tarjeta {
+  background: #fff;
+  max-width: 320px;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.foto {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  border: 4px solid #e0e7ff;
+  margin-bottom: 16px;
+}
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0f172a;
+}
+.cargo {
+  font-size: 15px;
+  color: #64748b;
+  margin: 24px 0;
+}
+.acciones {
+  display: flex;
+  gap: 12px;
+}
+.btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.contactar {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+}
+.portafolio {
+  background: #fff;
+  border: 2px solid #4f46e5;
+  color: #4f46e5;
+}
+.contactar:hover {
+  background: #4338ca;
+}
+.portafolio:hover {
+  background: #e0e7ff;
+}
