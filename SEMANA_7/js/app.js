@@ -1,5 +1,5 @@
 import { personajes } from './datos.js';
-
+import { filtrarPersonajes, contarVivos, buscarPorId } from './logica.js';
 
 const ESTADOS = {
   Alive:   { texto: 'Vivo',        clases: 'bg-emerald-100 text-emerald-700' },
